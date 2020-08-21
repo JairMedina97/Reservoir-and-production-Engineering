@@ -1,0 +1,394 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{fancyhdr}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\rhead[z1]{Caracterización Dinámica de Yacimientos}
+\rfoot[e1]{Ecuación de difusividad}
+\fancypagestyle{plain}{
+\fancyhead[L]{K1}
+\fancyhead[C]{K2}
+\fancyhead[R]{K3}
+\fancyfoot[L]{L1}
+\fancyfoot[C]{L2}
+\fancyfoot[R]{L3}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+}
+
+\pagestyle{fancy}
+
+\begin{document}
+\ \\ $\displaystyle \frac{\partial ^2 u}{\partial x} = cos \theta \left[cos \theta \frac{\partial ^2 u}{\partial r^2} - sin \theta \frac{\partial ^2 u}{\partial \theta \partial r}\right] + \; ... $
+\\\\
+\ \\ $\displaystyle \frac{\partial u}{\partial r} \left[- sin \theta \frac{\partial \theta}{\partial x} \right] \;\rightarrow \frac{\partial \theta}{\partial x} 
+ \left(\frac{-sin \theta}{r} \right)$
+\\\\
+\ \\ $\displaystyle ... + \frac{\partial u}{\partial r} \left[\frac{sin ^2 \theta}{r}  \right] - \frac{sin \theta}{r} \left[ cos \theta \frac{\partial^2 u}{\partial r \partial \theta} - \frac{sin \theta}{r} \frac{\partial^2 u}{\partial \theta^2} \right]... $ 
+\\\\
+\ \\ $\displaystyle - \frac{\partial u}{\partial \theta} \left[ \frac{ r \; cos \theta \left(\frac{\partial \theta}{\partial x} \right) - sin \theta \left(\frac{\partial r}{\partial x} \right) }{r^2} \right]$
+\ \\ $\displaystyle \frac{\partial \theta}{\partial x} = \frac{- sin \theta}{r} \; \; \frac{\partial r}{\partial x} = cos \theta$
+\\
+\ \\ $\displaystyle
+= cos^2 \theta \frac{\partial^2 u}{\partial r^2} - \frac{sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r} \; \frac{\partial u}{\partial r} - \frac{sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r^2} \; \frac{\partial^2 u}{\partial \theta^2} \: \frac{2 sen \theta cos \theta}{r} \; \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+= cos^2 \theta \; \frac{\partial^2 u}{\partial r} - \frac{2 sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{sen^2 \theta}{r} \; \frac{\partial^2 u}{\partial \theta^2} + \frac{2 sen \theta cos \theta}{r^2}  \; \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+\frac{\partial^2 u}{\partial y^2} = sin \theta \left[( sin \theta \frac{\partial^2 u}{\partial r^2} + \frac{cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta}\right] + \frac{\partial u}{\partial r} \left[\frac{cos^2 \theta}{r}\right ] + \frac{cos \theta}{r} \left [ sin \theta \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos\theta}{r} \frac{\partial^2 u}{\partial \theta^2}\right]$
+\\
+\ \\ $\displaystyle
++ \frac{\partial u}{\partial \theta} \left[\frac{r [-sin  \theta \frac{\partial \theta}{\partial y}] - cos \theta \frac{\partial r}{\partial y}}{r^2}\right] \rightarrow r \left[\frac{-sin \theta (\frac{cos \theta}{r}) - cos \theta sin \theta}{r^2}\right]$
+\\
+\ \\ $\displaystyle
+= sin^2 \theta \frac{\partial^2 u}{\partial r^2} + \frac{sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r^2} \frac{\partial^2 u}{\partial \theta^2} - \frac{2 sin \theta cos \theta}{r^2} \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+= sin^2 \theta \frac{\partial^2 u}{\partial r^2} + \frac{2 sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{cos^2}{r} \frac{\partial^2 u}{\partial \theta^2} - \frac{2 sin \theta cos \theta}{r^2} \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+\nabla^2 u = \frac{\partial^2 u}{\partial r} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} = 0$
+
+\newpage
+\begin{center}
+\includegraphics[scale=0.6]{logo.jpg}
+\end{center}
+\
+\\
+\\\
+\begin{center}
+{\Large{\textbf{\ Caracterización Dinámica de Yacimientos}}}
+\end{center}
+\bigskip
+\large
+\begin{center}
+\ Ecuación de difusividad para flujo esferico para un cono
+\end{center}
+\bigskip
+\ M.C. Víctor Matías Pérez
+\\
+\\\
+\
+\ Emiliano Olivo Rodríguez                  1661049
+\\
+\ Guillermo Adrián Ramírez García      1660045
+\\
+\ Jair Josué Medina Ortiz    1792351
+\\
+\ Antonio Campuzano Quintero             1792339
+\\
+\ José Ramon Tapia Cano                     1792337
+\\
+\ Ronaldo Rodríguez Castilleja              1663382
+\\
+\ Arely Sarahi Ramírez Diaz                  1657284
+\\
+\ Raúl Adrián Ríos Garza                       1675372
+\\
+\ Edras Oziel Martínez Sánchez             1768020
+\\
+\ Yazmin Del Rosario Gómez Martínez  1636784
+\\
+\ Miguel Romero Reyes  1660474
+\\
+\ Cesar Alfonso Martínez Sánchez    792322
+\\
+\ Félix Daniel Guerrero Alvarado            1684146
+\\
+\ Guillermo Arturo Tello Mejía                 1619105
+\\
+\ Carlos Andrés Mancillas Narváez         1665817
+\\
+\ Eduardo Sebastián Guerra Flores        1641831
+\\
+\ Francisco Javier Alcocer Carrizales 1669259
+\\
+\\\
+\begin{center}
+\ Semestre 7
+\end{center}
+\bigskip
+\ Linares, Nuevo León a 26 de noviembre del 2018.
+\
+\newpage
+\ Indice
+\
+\newpage
+\textbf{Introducción}
+%\end{center}
+
+La ecuación de la difusividad es la combinación de las principales ecuaciones que describen el proceso físico del movimiento de fluido dentro del yacimiento, combina la ecuación de continuidad (que es el principio de la conservación de la masa, y de aquí obtenemos el balance de materia), la ecuación de flujo (ecuación de Darcy) y la ecuación de estado (comprensibilidad).\\
+
+\begin{center}
+$\dfrac{\partial^{2}P}{\partial r^{2}}$+$\dfrac{1}{r}\dfrac{\partial P}{\partial r}$=$\dfrac{\phi.\mu.C_{t}}{k}\dfrac{\partial P}{\partial t}$
+\end{center}
+\bigskip
+Esta ecuación tiene 3 variables: 1 presión que es la del reservorio y 2 saturaciones que son generalmente la oil y la del gas en reservorios volumétricos.\\
+
+A partir de esta ecuación se obtiene las ecuaciones para los tipos de flujo que existen en el yacimiento, por ejemplo en la segunda parte de la ecuación de la difusividad la presión varia con el tiempo (deltaP/Delta t) si estamos en el estado pseudoestable es decir la presión no depende del tiempo ya que llego al límite del reservorio (infinit acting) esta variable es 0 por lo que la ecuación de la difusividad tendrá una resolución que es la ecuación de flujo radial para el estado pseudoestable.
+%\begin{titlepage}
+%\begin{center}
+%\textbf{Cambio de coordenadas cartesianas a esféricas}
+%\end{center}
+\medskip
+%\begin{center}
+%\includegraphics[scale=0.4]{cdy} 
+\\
+%\caption{Coordenadas}
+%\end{center}
+%\bigskip
+%En la imagen anterior se observa:
+%\\
+%$\bullet$ Coordenadas cartesianas (x, y, z)
+%\\
+%$\bullet$ Coordenadas esféricas $(r, \varphi, \Theta)$
+%\\
+%Basados en el procedimiento de Laplace, el cual consiste en el cambio de las dimesiones de las coordenadas, se efectuó la sustitución de coordenadas cartesianas a coordenadas esféricas.
+%\end{titlepage}
+\\
+\textbf{\ Coordenadas cartesianas}
+\\
+\\\
+\ $ \dfrac{\partial^{2}u}{\partial x^{2}} + \dfrac{\partial^{2}u}{\partial y^{2}} + \dfrac{\partial^{2}u}{\partial z^{2}}= 0$
+\\
+\\\
+\textbf{Coordenadas cilíndricas}
+\\
+\\\
+\ $\dfrac{1}{p} \dfrac{\partial}{\partial p} \left( p \dfrac{\partial u}{\partial p} \right) + \dfrac{1}{p^{2}}  \left( \dfrac{\partial^{2} u}{\partial \theta^{2}} \right) + \dfrac{\partial^{2}}{\partial z^{2}}$
+\\
+\\\
+\textbf{Coordenadas esfericas}
+\\
+\\\
+\ $\dfrac{1}{r^{2}} \dfrac{\partial}{\partial r} \left( r^{2}  \dfrac{\partial u}{\partial r} \right) + \dfrac{1}{r^{2} sin \varphi }  \dfrac{\partial}{\partial \varphi} \left( sin \varphi \dfrac{\partial u}{\partial \varphi} \right) + \dfrac{1}{r^{2} sin^{2} }\dfrac{\partial^{2}u}{\partial \theta^{2}}= =0$
+\\
+\\\
+\ Coordenadas Polares 2 dimensiones
+\\
+\\\
+\ $\nabla^{2}u= \dfrac{\partial^2 u}{\partial x^{2}} + \dfrac{\partial ^{2}u}{\partial y^{2}}=0$
+\\
+\\\
+\ Donde utilizaremos:
+\\
+\ $x = r cos \theta $
+\\
+\ $y = r sen \theta $
+\\
+\ $tan \theta = \frac{y}{x} \;\;\;\;\Rightarrow \theta = tan^{-1} \frac{y}{x}$
+\\
+\ utilizaremos la ecuación de un circulo: $ r^{2} = x^{2} + y^{2}$
+\\
+\\\
+\ Ec. 1 $\dfrac{\partial u (r, \theta )}{\partial x} = \dfrac{\partial u }{\partial r} \dfrac{\partial r}{\partial x} + \dfrac{\partial u}{\partial \theta} \dfrac{\partial \theta}{\partial x}$
+\\
+\ Derivando la ecuacion de un circulo: 
+\\
+\ $\displaystyle 2r \frac{\partial r}{\partial r} = 2x
+\\
+\ \displaystyle \frac{\partial r}{\partial x} = 2x = \frac{r cos \theta}{r} = cos \theta$
+\\
+\\\
+\ Derivando $\theta = tan^{-1} \dfrac{y}{x}$
+\\
+\ $\dfrac{\partial \theta}{\partial x} = \dfrac{1}{1 + \dfrac{y^{2}}{x^{2}}} \left( \dfrac{-y}{x^{2}} \right)$
+\\
+\\\
+\ $\dfrac{x^{2}}{x^{2}+y^{2}}  \left( \dfrac{y}{x^{2}} \right)$
+\\
+\\\
+\ $\dfrac{r sen \theta}{r^{2}}= \dfrac{-sen \theta}{r}$ 
+\\
+\\\
+\ $\dfrac{\partial \theta}{\partial x}= \dfrac{sen \theta}{r}$
+\\
+\\\
+\ Sustituyendo los valores obtenidos en las derivadas en nuestra ec. 1
+\\
+\\\
+\ $\dfrac{\partial u (r, \theta )}{\partial x} = cos \theta \dfrac{\partial u }{\partial r} + \dfrac{sen \theta}{r} \dfrac{\partial u}{\partial \theta}$ 
+\ \\ $\displaystyle \frac{\partial ^2 u}{\partial x} = cos \theta \left[cos \theta \frac{\partial ^2 u}{\partial r^2} - sin \theta \frac{\partial ^2 u}{\partial \theta \partial r}\right] + \; ... $
+\\
+\ \\ $\displaystyle \frac{\partial u}{\partial r} \left[- sin \theta \frac{\partial \theta}{\partial x} \right] \;\rightarrow \frac{\partial \theta}{\partial x} 
+ \left(\frac{-sin \theta}{r} \right)$
+\\
+\ \\ $\displaystyle ... + \frac{\partial u}{\partial r} \left[\frac{sin ^2 \theta}{r}  \right] - \frac{sin \theta}{r} \left[ cos \theta \frac{\partial^2 u}{\partial r \partial \theta} - \frac{sin \theta}{r} \frac{\partial^2 u}{\partial \theta^2} \right]... $ 
+\\
+\ \\ $\displaystyle - \frac{\partial u}{\partial \theta} \left[ \frac{ r \; cos \theta \left(\frac{\partial \theta}{\partial x} \right) - sin \theta \left(\frac{\partial r}{\partial x} \right) }{r^2} \right]$
+\ \\ $\displaystyle \frac{\partial \theta}{\partial x} = \frac{- sin \theta}{r} \; \; \frac{\partial r}{\partial x} = cos \theta$
+\\
+\ \\ $\displaystyle
+= cos^2 \theta \frac{\partial^2 u}{\partial r^2} - \frac{sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r} \; \frac{\partial u}{\partial r} - \frac{sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r^2} \; \frac{\partial^2 u}{\partial \theta^2} \: \frac{2 sen \theta cos \theta}{r} \; \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+= cos^2 \theta \; \frac{\partial^2 u}{\partial r} - \frac{2 sen \theta cos \theta}{r} \; \frac{\partial^2 u}{\partial r \partial \theta} + \frac{sen^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{sen^2 \theta}{r} \; \frac{\partial^2 u}{\partial \theta^2} + \frac{2 sen \theta cos \theta}{r^2}  \; \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+\frac{\partial^2 u}{\partial y^2} = sin \theta \left[( sin \theta \frac{\partial^2 u}{\partial r^2} + \frac{cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta}\right] + \frac{\partial u}{\partial r} \left[\frac{cos^2 \theta}{r}\right ] + \frac{cos \theta}{r} \left [ sin \theta \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos\theta}{r} \frac{\partial^2 u}{\partial \theta^2}\right]$
+\\
+\ \\ $\displaystyle
++ \frac{\partial u}{\partial \theta} \left[\frac{r [-sin  \theta \frac{\partial \theta}{\partial y}] - cos \theta \frac{\partial r}{\partial y}}{r^2}\right] \rightarrow r \left[\frac{-sin \theta (\frac{cos \theta}{r}) - cos \theta sin \theta}{r^2}\right]$
+\\
+\ \\ $\displaystyle
+= sin^2 \theta \frac{\partial^2 u}{\partial r^2} + \frac{sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r^2} \dfrac{\partial^2 u}{\partial \theta^2} - \frac{2 sin \theta cos \theta}{r^2} \frac{\partial u}{\partial \theta}$ 
+\\
+\ \\ $\displaystyle
+= sin^2 \theta \frac{\partial^2 u}{\partial r^2} + \frac{2 sin \theta cos \theta}{r} \frac{\partial^2 u}{\partial r \partial \theta} + \frac{cos^2 \theta}{r} \frac{\partial u}{\partial r} + \frac{cos^2}{r} \frac{\partial^2 u}{\partial \theta^2} - \frac{2 sin \theta cos \theta}{r^2} \frac{\partial u}{\partial \theta}$
+\\
+\ \\ $\displaystyle
+\nabla^2 u = \frac{\partial^2 u}{\partial r} + \frac{1}{r} \frac{\partial u}{\partial r} + \frac{1}{r^2} \frac{\partial^2 u}{\partial \theta^2} = 0$
+
+\newpage
+\ \\ La ecuación escrita en coordenadas esféricas haciendo dos simples modificaciones a la misma descrita en coordenadas cartesianas.
+\\
+\ \\ a) Reemplazar $(x,y,z)$ por $(r, \phi, \theta)$
+\\
+\ \\  b)Uso de factor 
+\ \\ $$\displaystyle \left( \frac{r^2}{r^2} , \frac{1}{r^2 sin^2 \theta} , \frac{sin \theta}{r^2 sin \theta} \right)$$
+\\\\ La ecuación diferencial parcial en coordenadas cartesianas 
+\ \\ $$\displaystyle \frac{\partial}{\partial x} \left( \frac{\partial P}{\partial x } \right) +
+\frac{\partial}{\partial y} \left( \frac{\partial P}{\partial y } \right) + 
+\frac{\partial}{\partial z} \left( \frac{\partial P}{\partial z } \right) = \frac{k A \; ct}{\mu} \frac{\partial P}{\partial t}$$
+\ \\ Aplicando las dos modificaciones mencionadas:
+\ \\ $$ \displaystyle 
+\frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial P}{\partial r } \right) +
+\frac{1}{r^2 sin^2 \theta} \frac{\partial}{\partial \phi} \left(1 \frac{\partial P}{\partial \phi } \right)
+\frac{1}{r^2 sin \theta} \frac{\partial}{\partial \theta} \left(sin \theta \frac{\partial P}{\partial \theta } \right) = \frac{k A \; ct}{\mu} \frac{\partial P}{\partial t}$$
+\ \\ Ecuación en una dimensión 
+\ \\ $$\displaystyle \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial P}{\partial r} \right) = \frac{k A \; ct}{\mu} \frac{\partial P}{\partial t}$$
+\\
+
+\newpage
+\
+\begin{center}
+Deducción de la ecuación de difusividad para flujo esférico
+\end{center}
+\bigskip
+\begin{equation}
+\Delta{t}(q\rho\vert_{r})-\Delta{t}(q\rho\vert_{r+\Delta{r}})= V\phi\rho\vert_{T+\Delta{T}}-V\phi\rho\vert_{T}
+\end{equation}
+\begin{equation}
+\Delta{t}(q\rho\vert_{r})-\Delta{t}(q\rho\vert_{r+\Delta{r}})=\phi4\pi r^{2}\Delta_{r}\rho\vert_{T+\Delta{T}}-\phi4\pi r^{2}\Delta_{r}\rho\vert_{T}
+\end{equation}
+\begin{equation}
+\frac{q\rho\vert_{r}-q\rho\vert_{r+\Delta{r}}}{r^{2}\Delta_{r}}=\frac{\phi4\pi\rho\vert_{T+\Delta{T}}-\phi4\pi\rho\vert_{T}}{\Delta{T}}
+\end{equation}
+\begin{equation}
+\frac{\delta}{\delta{r}}=-\frac{q\rho\vert_{r+\Delta{r}}+q\rho\vert_{r}}{r^{2}\Delta_{r}}=\frac{\delta}{\delta{T}}=\frac{\phi4\pi\rho\vert_{T+\Delta{T}}-\phi4\pi\rho\vert_{T}}{\Delta{T}}
+\end{equation}
+\begin{equation}
+\frac{1}{r^{2}}\frac{\delta}{\delta_{r}}(q\rho)=\frac{\delta}{\delta_{T}}(\phi4\pi\rho)
+\end{equation}
+\begin{equation}
+\frac{1}{r^{2}}\frac{\delta}{\delta{r}}(-\frac{4\pi}{r^{2} \mu} \frac{\delta{p}}{\delta{r}}\rho = \frac{\delta}{\delta{T}}(\phi {4\pi}\rho)
+\end{equation}
+\begin{equation}
+-\frac{1}{r^{2}}\frac{\delta}{\delta{r}}(\frac{K}{\mu} r^{2} \frac{\delta{p}}{\delta{r}}\rho)=\frac{\delta}{\delta{T}}(\phi\rho)
+\end{equation}
+\begin{equation}
+-r^{2}\frac{1}{r^{2}}\frac{\delta}{\delta{r}}( \frac{\delta{p}}{\delta{r}}\rho)=\frac{\mu}{K}(\phi\rho)\frac{\delta{P}}{\delta{T}}
+\end{equation}
+\begin{equation}
+-r^{2}\frac{1}{r}\frac{\delta}{\delta{r}}( \frac{\delta{p}}{\delta{r}}\rho)=\frac{\mu}{K}(\rho\frac{\delta{\phi}}{\delta{T}}+ \phi \frac{\delta{\rho}}{\delta{T}})
+\end{equation}
+\\
+\begin{normalsize}
+Desarrollo de la compresibilidad  $C_{t}=C_{f}+C_{r}$
+\end{normalsize}
+%\begin{normalsize}
+%Desarrollo de la compresibilidad  de la formacion
+%\end{normalsize}
+%\medskip
+%\begin{equation}
+%C_{f}= \dfrac{1}{\rho}(\dfrac{\delta{\rho}}%{\delta{P}})_{T}
+%\end{equation}
+%\begin{equation}
+%C_{f}\delta{P}=\dfrac{\delta{\rho}}{\rho}
+%\end{equation}
+
+\begin{equation}
+\rho{sc} * e^{cf(P-Psc)}=\rho
+\dfrac{dP}{dT}=Psc e^{cf(P-Psc)}*\dfrac{dP}{dT}
+\end{equation}
+\begin{equation}
+\dfrac{dP}{dT}=Psc e^{cf(P-Psc)}*\dfrac{dP}{dT}
+\end{equation}
+\begin{equation}
+\dfrac{dP}{dT}=Cf\rho\dfrac{dP}{dT}
+\end{equation}
+
+\begin{normalsize}
+Desarrollo de la compresibilidad  de la roca
+\end{normalsize}
+\begin{equation}
+Cr=\dfrac{1}{\phi}\dfrac{d\phi}{dP}
+\end{equation}
+\begin{equation}
+Cr(dP)=\dfrac{d\phi}{\phi}
+\end{equation}
+
+\begin{equation}
+\dfrac{Cr(dP)\phi}{dT}=\dfrac{dP}{dT}
+\end{equation}
+\begin{equation}
+\dfrac{1}{r^{2}} r^{2} (\dfrac{\delta}{\delta{r}}\rho\dfrac{\delta{P}}{\delta{r}})=\dfrac{\mu}{K}(\rho{Cr}\phi\dfrac{\delta{P}}{\delta{T}}+\phi{Cf}\rho\dfrac{\delta{P}}{\delta{T}})
+\end{equation}
+\begin{equation}
+\dfrac{1}{r^{2}} r^{2} (\dfrac{\delta}{\delta{r}}\rho\dfrac{\delta{P}}{\delta{r}})=\dfrac{\mu}{Ct}\phi\rho{K}\dfrac{\delta{P}}{\delta{T}}
+\end{equation}
+
+\begin{equation}
+\dfrac{1}{re} r^{2} \dfrac{\delta}{\delta{r}}(\dfrac{\delta{P}}{\delta{r}}))=\dfrac{\mu}{Ct}\phi\rho{K}\dfrac{\delta{P}}{\delta{T}}
+\end{equation}
+
+\begin{normalsize}
+Explicación de la depreciación del Angulo $\varphi$
+\end{normalsize}
+\\
+\\
+\includegraphics[scale=0.5]{cdy2}
+\\
+\\
+\begin{normalsize}
+En base a la ecuación 1, la cual representa las coordenadas esféricas, se determina que el ángulo azimut ($\\varphi$) se desprecia por la geometría que se está analizando, la cual es un cono perfecto y no existe un diferencial de $\\varphi$. 
+\end{normalsize}
+\\
+\\
+\includegraphics[scale=0.5]{cdy1}
+\\
+\\
+\begin{normalsize}
+Al tener la geometría de un cono, no depende de un angulo azimut ($\\varphi$) debido a su simetría. 
+\end{normalsize}
+
+\newpage
+Soluciones a la ecuación de difusión en geometrias no estandar son de interes intrinseco pero a la vez de uso práctico cuando los códigos computacionales han dado solución a las mismas, Recordemos la ecuación Glastone and Edlund (1953)
+\\
+\ \\ $$\nabla^2 \phi + B^2 \phi = 0$$
+\\
+\ \\ Sujeta a condiciones en la frontera de flujo nulo en conos y esquinas. Las soluciones son descritas analiticamente y se presenta la distribución de flujo en términos de la dimensión fisica del cono.El procedimiento que propone (Morse and Feshbach, 1953), escribimos la ecuación Helmholtz llamada así como la ecuacion de difusión física en coordenadas esféricas como:
+\\
+\ \\ $$\displaystyle \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial P}{\partial r} \right) + 
+\frac{1}{r^2 sin^2 \theta} \frac{\partial}{\partial \theta} \left( sin \theta \frac{\partial P}{\partial \theta } \right) = \frac{k A \; ct}{\mu} \frac{\partial P}{\partial t}$$
+\\
+\ \\ Donde se describe que $P = P(r, \theta) , \; \theta$ siendo el ángulo medido con respecto al eje z. No hay dependencia con el ángulo azimutal debido a la simetria. Las condiciones de frontera llegan a ser:
+\\
+\ \\ a) El flujo es finito
+\\
+\ \\ b) $P \left( r , \theta_0 \right) = 0$
+\\ 
+\ \\ c) $P \left( R_0 , \theta \right) = 0$
+\\
+\ \\ Donde $R_0$ es el radio del cono y $\theta_0$ es el ángulo medio. Siendo así $\theta_0 < \pi/2$ porque deseamos evidtar la reentrada de condiciones. Aún así el valor de $\theta_0 > \pi/2$ donde la entrada física significativa se asume que el volumen contenido en la reentrada de masa.
+
+
+
+\end{document}

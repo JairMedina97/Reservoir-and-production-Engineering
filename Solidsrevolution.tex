@@ -1,0 +1,143 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{kpfonts}
+\usepackage{fancyhdr}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+%\lhead[x1]{FCT}
+%\chead[y1]{Probabilidad}
+\rhead[z1]{Ecuaciones Diferenciales Parciales}
+%\renewcommand{\headrulewidth}{0.5pt}
+%encabezado de pagina par e impar
+
+
+
+%\lfoot[a1]{S}
+%\cfoot[c1]{d2}
+\rfoot[e1]{Jair Medina}
+%\renewcommand{\footrulewidth}{0.5pt}
+%pie de página de par e impar
+
+%aqui definimos el encabezado y pie de pagina de la pagina inicial de un capitulo
+\fancypagestyle{plain}{
+\fancyhead[L]{K1}
+\fancyhead[C]{K2}
+\fancyhead[R]{K3}
+\fancyfoot[L]{L1}
+\fancyfoot[C]{L2}
+\fancyfoot[R]{L3}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+}
+
+\pagestyle{fancy}
+%hasta aquí
+
+\begin{document}
+{\bf {Solids of Revolution Method of Rings}}
+\\\\In this section we will look at the volume of a solid of revolution. We should first define just what a solid of revolution is. To get a solid of revolution we start out with a function, $y \,= f(x)$, on an interval [a,b].
+\\\\ $\displaystyle y \, = \, x^2 $
+\\\\ $\displaystyle \int_0^2 \, x^2 \, dx$
+\\\\ $\displaystyle A \, = \pi \, r^2 $
+\\\\ $\displaystyle radius \, = \, x^2 $
+\\\\ $\displaystyle A \, = \pi \, (x^2)^2 $
+\\\\ $\displaystyle Volume \; A \, * \, dx \, = \, \pi \, x^4 \,  dx $
+\\\\ $\displaystyle \int_0^2 \, x^4 \, \pi \, dx$
+\\\\ $\displaystyle \pi \int_0^2 \, x^4 \, dx \, = \, \frac{\pi \, x^5}{5} /_0^2 \, = \, \frac{\pi \, (2)^5}{5} - \frac{\pi \, (0)^5}{5}$
+\\\\ $\displaystyle \pi(\frac{2^5}{5} \, - \, \frac{1}{5}) \, = \, \pi(\frac{32}{5}-0) \, = \, \frac{32 \, \pi}{5}$
+\\\\Generalize equation x-axis
+\\\\ $\displaystyle y \, = \, f(x)$
+\\\\ Endpoints x-axis $a \rightarrow b$
+\\\\$A \, = \, \pi \, (f(x))^2 \, dx $
+\\\\ $\displaystyle \int_a^b \, \pi \, (f(x))^2 \, dx $
+\\\\Generalize equation y-axis
+\\\\ $\displaystyle \int_a^b \, \pi \, f(y) \, dy $
+\\\\ Possible equation for a solid of revolution with a water droplet shape "x=sin(y)"
+\\\\ $\displaystyle x=sin((\frac{y}{2}) \; * \; \frac{n}{5}) $
+\\\\ where "n" is a value that ranges from 6 to 9
+\\\\ When we graph the function we can select our values for "a" and "b"
+\\\\ $\displaystyle b \, = \, 0 \quad  a \, = \, 2\pi$
+\\\\ $\displaystyle \int_0^{2 \, \pi}\pi \, (sin(\frac{y}{2}) \; * \; \frac{n}{5}) \; dy \; = \; \frac{n \, \pi}{5} \int_0^{2 \, \pi} \, (sin(\frac{y}{2}) \, dy \; = \; - \frac{2 \, n \, \pi}{5} cos(\frac{y}{2})$
+\\\\ definite integral
+\\\\ $\displaystyle - \frac{2 \, n \, \pi}{5} \, cos(\frac{y}{2}) \; /_0^{2 \, \pi} = - \frac{2 \, n \pi}{5} cos(\frac{2 \, \pi}{2}) + ( \frac{2 \, n \, \pi}{5}) * cos (0)) $
+\\\\ $\displaystyle \frac{2 \, n \, \pi}{5} \, + \, \frac{2 \, n \, \pi}{5} \, = \, \frac{4 \, n \, \pi}{5} U^3$
+\newpage
+3. Encuentre la expansion en series de seno Fourier de $\phi(x) = 1 \quad 0<x<1$ Grafique los primeros tres o cuatro terminos.
+\\\\ EDP \quad$u_t = \alpha^2 u_{xx} \quad 0<x<1 \quad 0<t<\infty$
+\\\\ CFs $
+\left \{ \begin{matrix}
+u(0,t) = 0 
+\\
+& {0 < t < \infty}
+\\
+u(1,t)= 0 
+
+\end{matrix} \right. $
+\\\\ IC \quad $u(x,0) = \phi(x) \quad 0<x<1$
+\\\\ Antes de la separación de variables, se debe analizar el problema.Se tiene un rod donde la temperatura al final esta fija en cero. Tambien estamos dando datos al problema en forma de una condición inicial; nuestro objetivo es encontrrar la temperatura u(x,t) en puntos diferentes en el tiempo.
+\\\\ Separación de Variables a la solución de la EDP
+\\ $$u(x,t)=X(x)T(t)$$
+\\ Donde X(x)T(t) es función de t. Las soluciones son simples porque cualquier temperatura u(x,t) de esta forma va retener su forma basica para diferentes valores de tiempo "t".
+\\\\ La idea general is encontrar un sin fin de posibles soliciones que satisfacen la EDP (Que tambien satisfacen las CFs).Estas simples funciones $u_{n}(x,t)= X_n (x) T_n (t)$ llamadas soluciones fundamentales que son los principales pasos para nuestro problema y la solución u(x,t) que buscamos añadiendo la fundamental solución $X_n (x) T_n (t)$ de manera que la suma final sea:
+\\ $$\displaystyle \sum_{n=1}^\infty \; A_n \, X_n (x) \, T_n(t)$$
+\\\\ Paso 1
+\\\\ Deseamos obtener la función $u(x,t)$ que satisface las siguientes cuatro condiciones
+\\\\ Empezando, buscamos las soluciones de la forma $u(x,t) = X(x)T(t) \; \; $substituyendo $X(x)T(t)$
+\\ $$X(x)T'(t)=\alpha^2 X''(x)T(t) $$
+\\Se despeja y se divide por $\alpha^2$
+\\ $$\displaystyle\frac{T'(t)}{\alpha^2 T(t)} = \frac{X''(x)}{X(x)}$$
+\\ Se obtiene la separación de Variables y se iguala la constante $\lambda$
+\\  $$\displaystyle \dfrac{T'}{\alpha^2 T} = \frac{X''}{X} = -\lambda$$
+\\Se obtiene
+\\ $$\displaystyle T' + \lambda \alpha^2 T = 0 $$
+\\ $$\displaystyle X'' + \lambda X = 0 $$
+\\ Ahora se pueden resolver las ecuaciones diferenciales ordinarias por el metodo de reducción de orden.
+\\ $$\displaystyle T(t)= Ae^{-\lambda^2 \alpha^2 t}\; (A constante)$$
+\\ $$X(x)=A\; \sin(\lambda x) + B\; \cos(\lambda x)\; (A,B constantes)$$
+\\ Siguiendo X(x)T(t)
+\\ $$\displaystyle u(x,t)=e^{-\lambda^2 \alpha^2 t} [A \sin(\lambda x)+ B \cos(\lambda x)]$$
+\\ Paso 2 Encontrando soluciones a la EDP con las CFs
+\\ Ahora en este punto donde tenemos multiples soluciones a la EDP pero no todas satisfacen a la CFs o CI. El siguiente paso es seleccionar el set de nuestras soluciones.
+\\ $$e^{-\lambda^2 \alpha^2 t} [A \sin(\lambda x)+ B \cos(\lambda x)]$$
+\\ Condiciones de frontera
+\\\\ $u(0,t)=0$
+\\\\ $u(1,t)=0$
+\\\\ Las soluciones con los valores de frontera
+\\ $$u(0,t)=Be^{-\lambda^2 \alpha^2 t}=0$$
+\\ $$u(1,t)=Ae^{-\lambda^2 \alpha^2 t} \, \sin(\lambda)=0$$
+\\ $$\displaystyle\lambda_n = ^+_-\pi$$
+\\ Note que el ultimo valor de la condición de frontera implica A=0, pero si se selecciona se obtiene cero en la solución
+\\ $$u_n (x,t)= A_n e^{-(n \lambda \alpha)^2 t} \sin(n\pi x) \quad n=1,2...$$
+\\ Cada uno satisfaciendo la EDP y las CFs.Estos son los avances para la solución del problema y la deseada suma de las simples funciones; La especifica suma va depender de la condición inicial. Soluciones fundamentales
+\\ Paso 3 Encontrando la Solución a la EDP, CFs y CI
+\\ El ultimo paso es agregar las soluciones fundamentales
+\\ $$\displaystyle u(x,t)= \sum_{n=1}^\infty A_n e^{-(n \lambda \alpha)^2 t}
+\sin(n \pi x)$$
+\\ De tal forma que los coeficientes $A_n$ dan la condición inicial.
+\\ $$u(x,0)=\phi(x)$$
+\\ Se satisface, substituyendo la suma en la condición inicial.
+$\displaystyle \phi(x)= \sum_{n=1}^\infty A_n \sin(n \pi x)$
+\newpage
+La ecuación nos lleva a las sumas elementales de la funcion como se describen a continuación:
+\\\\ $\displaystyle A_1 \sin(\pi x) + A_2 \sin(2 \pi x) + A_3 \sin(3 \pi x)$
+
+$$\displaystyle \phi (x) = 1 = \sum_{n=1}^\infty A_n = 2 \int_0^1 sin(n \pi x) dx$$
+\\ \large = $\displaystyle
+\left \{ \begin{matrix}
+0 \; n = 0,2,4,..
+\\
+\dfrac{4}{n \pi} \; n = 1,3,5,..
+\end{matrix} \right. $
+\\ Por lo tanto $1 = \dfrac{4}{\pi}\left[\sin(\pi x)+\dfrac{1}{3}\sin(3 \pi x)+\dfrac{1}{5}sin(5 \pi x)...\right]$
+\\\\ \includegraphics[scale=0.4]{../../4ta EDP/fourier1.png} 
+\\fig. 1 Gráfica series de fourier primeros tres términos 
+\\
+\\\\ \includegraphics[scale=0.4]{../../4ta EDP/fourier2.png}
+\\fig. 2 Gráfica series de fourier primeros cuatro periodos
+\end{document}
